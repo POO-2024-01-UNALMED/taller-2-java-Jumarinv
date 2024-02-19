@@ -23,12 +23,7 @@ public class Auto {
 				
 				numAsientos++;	
 				
-			}else {
-				
-				return numAsientos;
 			}
-		
-		
 			
 		}
 		
