@@ -3,12 +3,14 @@ package test;
 public class Auto {
 	
 	String modelo;
-	Asiento[] asientos;
+	Asiento[] asientos = new Asiento [50];
 	String marca;
 	Motor motor;
 	int precio;
 	int registro;
 	static int cantidadCreados;
+	
+	 
 	
 	int cantidadAsientos () {
 		
@@ -21,7 +23,12 @@ public class Auto {
 				
 				numAsientos++;	
 				
+			}else {
+				
+				return numAsientos;
 			}
+		
+		
 			
 		}
 		
@@ -39,15 +46,22 @@ public class Auto {
 		
 		for (int i = 0; i< asientos.length; i++) {
 			
-			if (asientos[i].registro != registro) {
+			if (asientos[i] != null) {
+			
+				if (asientos[i].registro != registro) {
 				
-				return ("Las piezas no son originales");
+					return ("Las piezas no son originales");
 				
 				
+				}
+			}else {
+				
+				return ("Auto original");
 			}
-		}
+			
+		}return ("Auto original");
 		
-		return ("Auto original");
+		
 		
 	}
 	
