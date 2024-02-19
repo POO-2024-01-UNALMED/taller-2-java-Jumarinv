@@ -36,7 +36,7 @@ public class Auto {
 		
 	}
 	
-	String verificarintegridad () {
+	String verificarIntegridad () {
 		
 		if (motor.registro != registro) {
 			
